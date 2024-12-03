@@ -1,7 +1,24 @@
-<mvc:View controllerName="tutorial.controller.App"
+<mvc:View
+    controllerName="tutorial.controller.App"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+    xmlns="sap.m"
+>
+    <Shell id="_IDGenShell">
+        <App
+            id="_IDGenApp1"
+            class="myAppDemoWT"
+        >
+            <pages>
+                <Page
+                    id="_IDGenPage"
+                    title="{i18n>homePageTitle}"
+                >
+                    <content>
+                        <mvc:XMLView id="_IDGenXMLView" viewName="tutorial.view.HelloPanel" />
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
