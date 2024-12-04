@@ -79,9 +79,6 @@
 
 ## About The Project
 
-[![Homepage][product-screenshot]](https://github.com/user-attachments/assets/0c464533-f069-453d-885e-4a407ffe955a)
-[![Details][product-screenshot]](https://github.com/user-attachments/assets/9a20c4f8-49e5-4980-b22f-741d0aec269e)
-[![Rating][product-screenshot]](https://github.com/user-attachments/assets/e899990c-390c-498c-8221-8b9b9546464f)
 <img src="https://github.com/user-attachments/assets/0c464533-f069-453d-885e-4a407ffe955a" width="100" height="100">
 <img src="https://github.com/user-attachments/assets/9a20c4f8-49e5-4980-b22f-741d0aec269e" width="100" height="100">
 <img src="https://github.com/user-attachments/assets/e899990c-390c-498c-8221-8b9b9546464f" width="100" height="100">
@@ -102,8 +99,7 @@
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Just Download the package [Download](url)
 
 ### Prerequisites
 
@@ -111,50 +107,26 @@ This is an example of how to list things you need to use the software and how to
 
 - npm
   ```sh
-  npm install npm@latest -g
+  npm install --global @ui5/cli
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Extract files in the corrispondend Workspace folder of Visual Studio Code
+2. Open a terminal and write:
    ```sh
-   git clone https://github.com/Trane20121/Tutorial.git
-   ```
-3. Install NPM packages
+    npm i -D @ui5/cli
+    ```
+3. After that write: 
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+    cd .\webapp\
+    ```
+4. Last step is write: 
    ```sh
-   git remote set-url origin Trane20121/First_Project
-   git remote -v # confirm the changes
-   ```
+    npm start
+    ```
 
 <p align="right">(<a href="#readme-top">Back to Top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
 
 See the [open issues](https://github.com/Trane20121/Tutorial/issues) for a full list of proposed features (and known issues).
 
@@ -180,7 +152,7 @@ Don't forget to give the project a star! Thanks again!
 ### Top contributors:
 
 <a href="https://github.com/Trane20121/Tutorial/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Trane20121/First_Project" alt="contrib.rocks image" />
+  <img src="https://contrib.rocks/image?repo=Trane20121/Tutorial" alt="contrib.rocks image" />
 </a>
 
 <!-- LICENSE -->
@@ -195,21 +167,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-<<<<<<< HEAD
 Trane20121 - [@X_handle](https://x.com/Trane20121) - bounty_95@hotmail.it
->>>>>>> 5d5dcc8ce0c28b25fed44f1f810f73d968d852f7
 
 Project Link: [https://github.com/Trane20121/Tutorial](https://github.com/Trane20121/Tutorial)
-
-<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
@@ -230,6 +190,7 @@ Project Link: [https://github.com/Trane20121/Tutorial](https://github.com/Trane2
 [linkedin-url]: https://linkedin.com/in/hermes-de-micheli-b7029b21b/
 [product-screenshot]: images/screenshot.png
 [Node-shield]: https://img.shields.io/badge/node.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Download]: https://github.com/Trane20121/tutorial/archive/refs/heads/main.zip
 [Node-url]: https://nodejs.org/en
 [Html-shield]: https://img.shields.io/badge/html-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Html-url]: https://html.spec.whatwg.org/multipage/
