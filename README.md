@@ -82,8 +82,9 @@
 [![Homepage][product-screenshot]](https://github.com/user-attachments/assets/0c464533-f069-453d-885e-4a407ffe955a)
 [![Details][product-screenshot]](https://github.com/user-attachments/assets/9a20c4f8-49e5-4980-b22f-741d0aec269e)
 [![Rating][product-screenshot]](https://github.com/user-attachments/assets/e899990c-390c-498c-8221-8b9b9546464f)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+<img src="https://github.com/user-attachments/assets/0c464533-f069-453d-885e-4a407ffe955a" width="100" height="100">
+<img src="https://github.com/user-attachments/assets/9a20c4f8-49e5-4980-b22f-741d0aec269e" width="100" height="100">
+<img src="https://github.com/user-attachments/assets/e899990c-390c-498c-8221-8b9b9546464f" width="100" height="100">
 
 <p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
@@ -196,8 +197,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <<<<<<< HEAD
 Trane20121 - [@X_handle](https://x.com/Trane20121) - bounty_95@hotmail.it
-=======
-Trane20121 - [@X_handle](https://x.com/Trane20121) - email@email_client.com
 >>>>>>> 5d5dcc8ce0c28b25fed44f1f810f73d968d852f7
 
 Project Link: [https://github.com/Trane20121/Tutorial](https://github.com/Trane20121/Tutorial)
