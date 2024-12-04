@@ -8,14 +8,24 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="tutorial.controller.InvoiceList"
+    xmlns:core="sap.ui.core"
 >
     <List
         id="_IDGenList"
-        headerText="{i18n>invoiceListTitle}"
         class="sapUiResponsiveMargine"
         width="auto"
         items="{invoice>/Invoices}"
     >
+        <headerToolbar>
+            <Toolbar id="_IDGenToolbar1">
+                <Title id="_IDGenTitle" text="{i18n>invoiceListTitle}" />
+                <ToolbarSpacer id="_IDGenToolbarSpacer"/>
+                    <SearchField id="_IDGenSearchField"
+                        width="50%"
+                        search="onFilterInvoices"
+                    />
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem
                 id="_IDGenObjectListItem1"
@@ -26,7 +36,20 @@
                 showMeasure:false}}"
                 numberUnit="{view>/currency}"
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
-            />
+            >
+                <firstStatus>
+                    <ObjectStatus
+                        id="_IDGenObjectStatus"
+                        core:require="{
+                            Formatter: 'tutorial/model/formatters'
+                        }"
+                        text="{
+                            path: 'invoice>Status',
+                            formatter: 'Formatter.statusText.bind($controller)'
+                        }"
+                    />
+                </firstStatus>
+            </ObjectListItem>
         </items>
     </List>
 </mvc:View>
