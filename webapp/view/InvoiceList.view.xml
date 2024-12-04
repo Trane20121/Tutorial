@@ -14,16 +14,22 @@
         id="_IDGenList"
         class="sapUiResponsiveMargine"
         width="auto"
-        items="{invoice>/Invoices}"
+        items="{path:'invoice>/Invoices',
+        sorter:{path:'ShipperName',
+        group:true}}"
     >
         <headerToolbar>
             <Toolbar id="_IDGenToolbar1">
-                <Title id="_IDGenTitle" text="{i18n>invoiceListTitle}" />
-                <ToolbarSpacer id="_IDGenToolbarSpacer"/>
-                    <SearchField id="_IDGenSearchField"
-                        width="50%"
-                        search="onFilterInvoices"
-                    />
+                <Title
+                    id="_IDGenTitle"
+                    text="{i18n>invoiceListTitle}"
+                />
+                <ToolbarSpacer id="_IDGenToolbarSpacer" />
+                <SearchField
+                    id="_IDGenSearchField"
+                    width="50%"
+                    search="onFilterInvoices"
+                />
             </Toolbar>
         </headerToolbar>
         <items>
