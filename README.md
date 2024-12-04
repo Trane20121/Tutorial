@@ -167,7 +167,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Trane20121 - [@X_handle](https://x.com/Trane20121) - bounty_95@hotmail.it
+Trane20121 - [@X](https://x.com/Trane20121) - bounty_95@hotmail.it
 
 Project Link: [https://github.com/Trane20121/Tutorial](https://github.com/Trane20121/Tutorial)
 
