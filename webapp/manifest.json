@@ -70,32 +70,42 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "_IDGenApp1",
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
         "path": "tutorial.view",
         "async": true,
-        "viewPath": "tutorial.view"
+        "viewPath": "tutorial.view",
+        "targetControll": "_IDGenApp1"
       },
       "routes": [
         {
-          "name": "RouteHelloPanel",
-          "pattern": ":?query:",
-          "target": ["TargetHelloPanel"]
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail/{invoicePath}",
+          "name": "detail",
+          "target": "detail"
         }
       ],
       "targets": {
-        "TargetHelloPanel": {
-          "id": "HelloPanel",
-          "name": "HelloPanel"
+        "overview": {
+          "id": "overview",
+          "name": "Overview"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail"
         }
+      },
+      "rootView": {
+        "viewName": "tutorial.view.App",
+        "type": "XML",
+        "id": "App"
       }
-    },
-    "rootView": {
-      "viewName": "tutorial.view.App",
-      "type": "XML",
-      "id": "App"
     }
   }
 }

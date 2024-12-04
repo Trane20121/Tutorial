@@ -1,0 +1,15 @@
+<!--
+ Copyright (c) 2024 Trane2012
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="tutorial.controller.Detail"
+>
+    <Page id="_IDGenPage2" title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+        <ObjectHeader id="_IDGenObjectHeader" intro="{invoice>ShipperName}" title="{invoice>ProductName}" />
+    </Page>
+</mvc:View>

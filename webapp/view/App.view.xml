@@ -8,18 +8,6 @@
         <App
             id="_IDGenApp1"
             class="myAppDemoWT"
-        >
-            <pages>
-                <Page
-                    id="_IDGenPage"
-                    title="{i18n>homePageTitle}"
-                >
-                    <content>
-                        <mvc:XMLView id="_IDGenXMLView" viewName="tutorial.view.HelloPanel" />
-                        <mvc:XMLView id="_IDGenXMLView1" viewName="tutorial.view.InvoiceList"></mvc:XMLView>
-                    </content>
-                </Page>
-            </pages>
-        </App>
+        />
     </Shell>
 </mvc:View>
