@@ -51,7 +51,7 @@ sap.ui.define(
             value: this.getValue(),
             iconSize: "2rem",
             visualMode: "Half",
-            liveChange: this._onRate.bind(this),
+            liveChange: this.onRate.bind(this),
           })
         );
         this.setAggregation(
@@ -64,7 +64,7 @@ sap.ui.define(
           "_button",
           new Button({
             text: "{i18n>productRatingButton}",
-            press: this._onSubmit.bind(this),
+            press: this.onSubmit.bind(this),
           }).addStyleClass("sapUiTinyMarginTopBottom")
         );
       },
@@ -88,7 +88,7 @@ sap.ui.define(
         this.getAggregation("_button").setEnabled(true);
       },
 
-      _onRate(oEvent) {
+      onRate(oEvent) {
         const oRessourceBundle = this.getModel("i18n").getResourceBundle();
         const fValue = oEvent.getParameter("value");
 
@@ -103,7 +103,7 @@ sap.ui.define(
         this.getAggregation("_label").setDesign("Bold");
       },
 
-      _onSubmit(oEvent) {
+      onSubmit(oEvent) {
         const oResourceBundle = this.getModel("i18n").getResourceBundle();
 
         this.getAggregation("_rating").setEnabled(false);

@@ -10,7 +10,7 @@
     controllerName="tutorial.controller.InvoiceList"
     xmlns:core="sap.ui.core"
 >
-    <List
+    <Table
         id="_IDGenList"
         class="sapUiResponsiveMargine"
         width="auto"
@@ -32,32 +32,107 @@
                 />
             </Toolbar>
         </headerToolbar>
+        <columns>
+            <Column
+                id="_IDGenColumn"
+                hAlign="End"
+                minScreenWidth="Small"
+                demandPopin="true"
+                width="5em"
+            >
+                <Text
+                    id="_IDGenText1"
+                    text="{i18n>columnQuantity}"
+                />
+            </Column>
+            <Column id="_IDGenColumn1">
+                <Text
+                    id="_IDGenText2"
+                    text="{i18n>columnName}"
+                />
+            </Column>
+            <Column
+                id="_IDGenColumn2"
+                minScreenWidth="Small"
+                demandPopin="true"
+            >
+                <Text
+                    id="_IDGenText3"
+                    text="{i18n>columnStatus}"
+                />
+            </Column>
+            <Column
+                id="_IDGenColumn3"
+                minScreenWidth="Tablet"
+                demandPopin="false"
+            >
+                <Text
+                    id="_IDGenText4"
+                    text="{i18n>columnSupplier}"
+                />
+            </Column>
+            <Column
+                id="_IDGenColumn4"
+                hAlign="End"
+            >
+                <Text
+                    id="_IDGenText5"
+                    text="{i18n>columnPrice}"
+                />
+            </Column>
+        </columns>
         <items>
-            <ObjectListItem
-                id="_IDGenObjectListItem1"
-                title="{invoice>Quantity} x {invoice>ProductName}"
-                number="{parts:['invoice>ExtendedPrice', 'view>/currency'],
-                type:'sap.ui.model.type.Currency',
-                formatOptions:{
-                showMeasure:false}}"
-                numberUnit="{view>/currency}"
-                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
+            <ColumnListItem
+                id="_IDGenColumnListItem"
                 type="Navigation"
                 press="onPress"
             >
-                <firstStatus>
-                    <ObjectStatus
-                        id="_IDGenObjectStatus"
-                        core:require="{
-                            Formatter: 'tutorial/model/formatters'
-                        }"
-                        text="{
-                            path: 'invoice>Status',
-                            formatter: 'Formatter.statusText.bind($controller)'
-                        }"
+                <cells>
+                    <ObjectNumber
+                        id="_IDGenObjectNumber1"
+                        number="{invoice>Quantity}"
+                        emphasized="false"
                     />
-                </firstStatus>
-            </ObjectListItem>
+                    <ObjectIdentifier
+                        id="_IDGenObjectIdentifier"
+                        title="{invoice>ProductName}"
+                    />
+                    <Text
+                        id="_IDGenText6"
+                        core:require="{
+								Formatter: 'tutorial/model/formatters'
+						}"
+                        text="{
+								parts: [
+									'invoice>Status',
+									'i18n>invoiceStatusA',
+									'i18n>invoiceStatusB',
+									'i18n>invoiceStatusC'
+								],
+								formatter: 'Formatter.statusText.bind($controller)'
+						}"
+                    />
+                    <Text
+                        id="_IDGenText7"
+                        text="{invoice>ShipperName}"
+                    />
+                    <ObjectNumber
+                        id="_IDGenObjectNumber2"
+                        number="{
+								parts: [
+									'invoice>ExtendedPrice',
+									'view>/currency'
+								],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {
+									showMeasure: false
+								}
+							}"
+                        unit="{view>/currency}"
+                        state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
+                    />
+                </cells>
+            </ColumnListItem>
         </items>
-    </List>
+    </Table>
 </mvc:View>
