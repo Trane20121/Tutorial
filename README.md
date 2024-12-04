@@ -30,13 +30,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/Trane20121/Tutorial">
-    <img src="https://github.com/user-attachments/assets/99d9917a-37a0-41d1-988c-17210121a1d3" alt="Logo" width="80" height="80">
+    <img src="https://avatars.githubusercontent.com/u/115975065?v=4" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">SAPUI5 Tutorial</h3>
 
   <p align="center">
-    project_description
+    APP Tutorial SAPUI5
     <br />
     <a href="https://github.com/Trane20121/Tutorial"><strong>Explore the docs »</strong></a>
     <br />
@@ -79,7 +79,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Homepage][product-screenshot]](https://github.com/user-attachments/assets/0c464533-f069-453d-885e-4a407ffe955a)
+[![Details][product-screenshot]](https://github.com/user-attachments/assets/9a20c4f8-49e5-4980-b22f-741d0aec269e)
+[![Rating][product-screenshot]](https://github.com/user-attachments/assets/e899990c-390c-498c-8221-8b9b9546464f)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
