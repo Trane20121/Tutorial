@@ -4,8 +4,9 @@ sap.ui.define(
     "tutorial/model/models",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/resource/ResourceModel",
+    "sap/ui/Device",
   ],
-  (UIComponent, models, JSONModel, ResourceModel) => {
+  (UIComponent, models, JSONModel, ResourceModel, Device) => {
     "use strict";
 
     return UIComponent.extend("tutorial.Component", {
@@ -29,6 +30,11 @@ sap.ui.define(
         // enable routing
         this.getRouter().initialize();
 
+        //tipo di device
+        const oDeviceModel = new JSONModel(Device);
+        oDeviceModel.setDefaultBindingMode("OneWay");
+        this.setModel(oDeviceModel, "device");
+
         //set data model
         const oData = {
           recipient: {
@@ -44,6 +50,9 @@ sap.ui.define(
         });
         this.setModel(i18nModel, "i18n");
       },
+      getContentDensityClass(){
+        return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
+      }
     });
   }
 );

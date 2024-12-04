@@ -10,99 +10,110 @@
     controllerName="tutorial.controller.InvoiceList"
     xmlns:core="sap.ui.core"
 >
-    <Table
-        id="_IDGenList"
-        class="sapUiResponsiveMargine"
-        width="auto"
-        items="{path:'invoice>/Invoices',
-        sorter:{path:'ShipperName',
-        group:true}}"
-    >
+    <Panel id="_IDGenPanel2" accessibleRole="Region">
         <headerToolbar>
-            <Toolbar id="_IDGenToolbar1">
-                <Title
-                    id="_IDGenTitle"
-                    text="{i18n>invoiceListTitle}"
-                />
-                <ToolbarSpacer id="_IDGenToolbarSpacer" />
-                <SearchField
-                    id="_IDGenSearchField"
+            <Toolbar id="_IDGenToolbar">
+                <Title id="_IDGenTitle1" text="{i18n>invoiceListTitle}" />
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <SearchField id="_IDGenSearchField1"
                     width="50%"
                     search="onFilterInvoices"
                 />
             </Toolbar>
         </headerToolbar>
-        <columns>
-            <Column
-                id="_IDGenColumn"
-                hAlign="End"
-                minScreenWidth="Small"
-                demandPopin="true"
-                width="5em"
-            >
-                <Text
-                    id="_IDGenText1"
-                    text="{i18n>columnQuantity}"
-                />
-            </Column>
-            <Column id="_IDGenColumn1">
-                <Text
-                    id="_IDGenText2"
-                    text="{i18n>columnName}"
-                />
-            </Column>
-            <Column
-                id="_IDGenColumn2"
-                minScreenWidth="Small"
-                demandPopin="true"
-            >
-                <Text
-                    id="_IDGenText3"
-                    text="{i18n>columnStatus}"
-                />
-            </Column>
-            <Column
-                id="_IDGenColumn3"
-                minScreenWidth="Tablet"
-                demandPopin="false"
-            >
-                <Text
-                    id="_IDGenText4"
-                    text="{i18n>columnSupplier}"
-                />
-            </Column>
-            <Column
-                id="_IDGenColumn4"
-                hAlign="End"
-            >
-                <Text
-                    id="_IDGenText5"
-                    text="{i18n>columnPrice}"
-                />
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem
-                id="_IDGenColumnListItem"
-                type="Navigation"
-                press="onPress"
-            >
-                <cells>
-                    <ObjectNumber
-                        id="_IDGenObjectNumber1"
-                        number="{invoice>Quantity}"
-                        emphasized="false"
+        <Table
+            id="_IDGenList"
+            class="sapUiResponsiveMargine"
+            width="auto"
+            items="{path:'invoice>/Invoices',
+        sorter:{path:'ShipperName',
+        group:true}}"
+        >
+            <headerToolbar>
+                <Toolbar id="_IDGenToolbar1">
+                    <Title
+                        id="_IDGenTitle"
+                        text="{i18n>invoiceListTitle}"
                     />
-                    <ObjectIdentifier
-                        id="_IDGenObjectIdentifier"
-                        title="{invoice>ProductName}"
+                    <ToolbarSpacer id="_IDGenToolbarSpacer" />
+                    <SearchField
+                        id="_IDGenSearchField"
+                        width="50%"
+                        search="onFilterInvoices"
                     />
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column
+                    id="_IDGenColumn"
+                    hAlign="End"
+                    minScreenWidth="Small"
+                    demandPopin="true"
+                    width="5em"
+                >
+                    <Text
+                        id="_IDGenText2"
+                        text="{i18n>columnQuantity}"
+                    />
+                </Column>
+                <Column id="_IDGenColumn1">
+                    <Text
+                        id="_IDGenText3"
+                        text="{i18n>columnName}"
+                    />
+                </Column>
+                <Column
+                    id="_IDGenColumn2"
+                    minScreenWidth="Small"
+                    demandPopin="true"
+                >
+                    <Text
+                        id="_IDGenText4"
+                        text="{i18n>columnStatus}"
+                    />
+                </Column>
+                <Column
+                    id="_IDGenColumn3"
+                    minScreenWidth="Tablet"
+                    demandPopin="false"
+                >
+                    <Text
+                        id="_IDGenText5"
+                        text="{i18n>columnSupplier}"
+                    />
+                </Column>
+                <Column
+                    id="_IDGenColumn4"
+                    hAlign="End"
+                >
                     <Text
                         id="_IDGenText6"
-                        core:require="{
+                        text="{i18n>columnPrice}"
+                    />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem
+                    id="_IDGenColumnListItem"
+                    type="Navigation"
+                    press=".onPress"
+                >
+                    <cells>
+                        <ObjectNumber
+                            id="_IDGenObjectNumber"
+                            number="{invoice>Quantity}"
+                            emphasized="false"
+                        />
+                        <ObjectIdentifier
+                            id="_IDGenObjectIdentifier"
+                            title="{invoice>ProductName}"
+                        />
+                        <Text
+                            id="_IDGenText7"
+                            core:require="{
 								Formatter: 'tutorial/model/formatters'
 						}"
-                        text="{
+                            text="{
 								parts: [
 									'invoice>Status',
 									'i18n>invoiceStatusA',
@@ -111,14 +122,14 @@
 								],
 								formatter: 'Formatter.statusText.bind($controller)'
 						}"
-                    />
-                    <Text
-                        id="_IDGenText7"
-                        text="{invoice>ShipperName}"
-                    />
-                    <ObjectNumber
-                        id="_IDGenObjectNumber2"
-                        number="{
+                        />
+                        <Text
+                            id="_IDGenText8"
+                            text="{invoice>ShipperName}"
+                        />
+                        <ObjectNumber
+                            id="_IDGenObjectNumber1"
+                            number="{
 								parts: [
 									'invoice>ExtendedPrice',
 									'view>/currency'
@@ -128,11 +139,12 @@
 									showMeasure: false
 								}
 							}"
-                        unit="{view>/currency}"
-                        state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
-                    />
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table>
+                            unit="{view>/currency}"
+                            state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Panel>
 </mvc:View>

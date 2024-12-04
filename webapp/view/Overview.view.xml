@@ -14,6 +14,16 @@
         id="_IDGenPage1"
         title="{i18n>homePageTitle}"
     >
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo
+                rootRole="Region"
+                rootLabel="{i18n>Overview_rootLabel}"
+                contentRole="Main"
+                contentLabel="{i18n>Overview_contentLabel}"
+                headerRole="Banner"
+                headerLabel="{i18n>Overview_headerLabel}"
+            />
+        </landmarkInfo>
         <content>
             <mvc:XMLView
                 id="_IDGenXMLView3"

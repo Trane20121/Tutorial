@@ -3,7 +3,13 @@ sap.ui.define(
   (Controller, MessageToast) => {
     "use strict";
 
-    return Controller.extend("tutorial.controller.App", {});
+    return Controller.extend("tutorial.controller.App", {
+      onInit() {
+        this.getView().addStyleClass(
+          this.getOwnerComponent().getContentDensityClass()
+        );
+      },
+    });
   }
 );
 
