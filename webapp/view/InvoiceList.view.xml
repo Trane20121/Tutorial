@@ -1,0 +1,23 @@
+<!--
+ Copyright (c) 2024 Trane2012
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <List id="_IDGenList"
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargine"
+        width="auto"
+        items="{invoice>/Invoices}"
+    >
+        <items>
+            <ObjectListItem id="_IDGenObjectListItem1"
+                title="{invoice>Quantity} x {invoice>ProductName}"
+            />
+        </items>
+    </List>
+</mvc:View>

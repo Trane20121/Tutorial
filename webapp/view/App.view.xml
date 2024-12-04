@@ -16,6 +16,7 @@
                 >
                     <content>
                         <mvc:XMLView id="_IDGenXMLView" viewName="tutorial.view.HelloPanel" />
+                        <mvc:XMLView id="_IDGenXMLView1" viewName="tutorial.view.InvoiceList"></mvc:XMLView>
                     </content>
                 </Page>
             </pages>
